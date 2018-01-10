@@ -22,6 +22,9 @@ public class CRandomString {
 
     // метод, делающий рандомную строку
     private String SetResultString(int length) {
+        if (length<0) {
+            length*=-1;
+        }
         char[] charArray = stringData.toCharArray();
         StringBuilder result = new StringBuilder();
         Random random = new Random();
